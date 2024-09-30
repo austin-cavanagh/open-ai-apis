@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import NavBar from '@/components/NavBar';
+import NavBar from '@/components/nav-bar/NavBar';
 
 export const metadata: Metadata = {
   title: 'Open AI APIs',

@@ -1,66 +1,35 @@
+'use server';
+
 import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
 } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
+import NavBarButton from './NavBarButton';
 
-export default function NavBar() {
+const navigation = [
+  { name: 'Chat Completions', href: '/chat-completions' },
+  { name: 'Image Generation', href: '/image-generation' },
+  // { name: 'Embeddings', href: '/embeddings' },
+  // { name: 'Text to Speech', href: '/text-to-speech' },
+  // { name: 'Speech to Text', href: '/speech-to-text' },
+  // { name: 'Moderation', href: '/moderation' },
+  // { name: 'Fine Tuning', href: '/fine-tuning' },
+  // { name: 'Batch', href: '/batch' },
+];
+
+export default async function NavBar() {
   return (
     <Disclosure as="nav" className="bg-white shadow">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 justify-center">
           <div className="flex">
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-              {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
-              <a
-                href="/chat-completions"
-                className="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
-              >
-                Chat Completions
-              </a>
-              <a
-                href="/image-generation"
-                className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-              >
-                Image Generation
-              </a>
-              <a
-                href="/embeddings"
-                className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-              >
-                Embeddings
-              </a>
-              <a
-                href="/text-to-speech"
-                className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-              >
-                Text to Speech
-              </a>
-              <a
-                href="/speech-to-text"
-                className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-              >
-                Speech to Text
-              </a>
-              <a
-                href="/moderation"
-                className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-              >
-                Moderation
-              </a>
-              <a
-                href="/fine-tuning"
-                className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-              >
-                Fine Tuning
-              </a>
-              <a
-                href="/batch"
-                className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
-              >
-                Batch
-              </a>
+              {navigation.map(item => (
+                <NavBarButton name={item.name} href={item.href} />
+              ))}
             </div>
           </div>
           <div className="-mr-2 flex items-center sm:hidden">
