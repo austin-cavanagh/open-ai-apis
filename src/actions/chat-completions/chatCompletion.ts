@@ -5,7 +5,7 @@ import OpenAI from 'openai';
 
 const openai = new OpenAI();
 
-async function main() {
+export default async function chatCompletion() {
   const completion = await openai.chat.completions.create({
     messages: [
       { role: 'system', content: 'You are a helpful assistant.' },
@@ -16,9 +16,8 @@ async function main() {
       },
       { role: 'user', content: 'Where was it played?' },
     ],
-    model: 'gpt-4o-mini',
+    model: 'gpt-4o',
   });
 
   console.log(completion.choices[0]);
 }
-main();
