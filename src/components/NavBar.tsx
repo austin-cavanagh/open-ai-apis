@@ -26,37 +26,37 @@ export default function NavBar() {
                 Image Generation
               </a>
               <a
-                href="#"
+                href="/embeddings"
                 className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
               >
                 Embeddings
               </a>
               <a
-                href="#"
+                href="/text-to-speech"
                 className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
               >
                 Text to Speech
               </a>
               <a
-                href="#"
+                href="/speech-to-text"
                 className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
               >
                 Speech to Text
               </a>
               <a
-                href="#"
+                href="/moderation"
                 className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
               >
                 Moderation
               </a>
               <a
-                href="#"
+                href="/fine-tuning"
                 className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
               >
                 Fine Tuning
               </a>
               <a
-                href="#"
+                href="/batch"
                 className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
               >
                 Batch
